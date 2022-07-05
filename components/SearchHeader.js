@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useRef } from "react";
 import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
 import User from "./User";
+import SearchHeaderOptions from "./SearchHeaderOptions";
 
 export default function SearchHeader() {
   const router = useRouter();
@@ -15,7 +16,7 @@ export default function SearchHeader() {
 
     if (!term.trim()) return;
 
-    router.push(`/search?term=${term.trim()}`);
+    router.push(`/search?term=${term.trim()}&searchType=`);
   };
 
   return (
@@ -48,6 +49,8 @@ export default function SearchHeader() {
 
         <User className="ml-auto whitespace-nowrap" />
       </div>
+
+      <SearchHeaderOptions />
     </header>
   );
 }
