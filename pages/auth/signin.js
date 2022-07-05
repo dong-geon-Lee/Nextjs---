@@ -22,7 +22,7 @@ export default function signin({ providers }) {
               onClick={() => signIn(p.id, { callbackUrl: "/" })}
               className="bg-red-400 rounded-lg text-white p-3 hover:bg-red-500"
             >
-              Sign in with {providers.name}
+              Sign in with {p.name}
             </button>
           </div>
         ))}
