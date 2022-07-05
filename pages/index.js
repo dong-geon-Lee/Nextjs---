@@ -10,7 +10,7 @@ export default function Home() {
   const router = useRouter();
   const searchInputRef = useRef(null);
 
-  function search(e) {
+  const search = (e) => {
     e.preventDefault();
 
     const term = searchInputRef.current.value;
@@ -18,7 +18,7 @@ export default function Home() {
     if (!term.trim()) return;
 
     router.push(`/search?term=${term.trim()}`);
-  }
+  };
 
   return (
     <div>
