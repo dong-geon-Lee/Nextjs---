@@ -29,7 +29,7 @@ export default function PaginationButtons() {
           }&start=${startIndex + 10}`}
         >
           <div className="cursor-pointer flex flex-col items-center hover:underline">
-            <ChevronRightIcon className="h-5 " />
+            <ChevronRightIcon className="h-5" />
             <p>Next</p>
           </div>
         </Link>
